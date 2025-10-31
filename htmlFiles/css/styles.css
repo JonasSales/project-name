@@ -1,0 +1,5 @@
+/* Estilo para garantir que os ícones do Lucide sejam renderizados corretamente */
+[data-lucide] {
+    width: 20px;
+    height: 20px;
+}

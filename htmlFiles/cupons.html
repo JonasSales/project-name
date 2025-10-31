@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoMart Angolano - Gerenciar Cupons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide.js"></script>
+    
+    <script src="js/tailwind.config.js"></script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans bg-page-bg">
+
+    <div id="app" class="flex flex-col min-h-screen">
+
+        <header class="bg-header-bg text-gray-200 shadow-lg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-yellow-400 p-2 rounded-md">
+                            <svg class="w-6 h-6 text-header-bg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                        </div>
+                        <span class="text-xl font-bold text-white">WoMart (Admin)</span>
+                    </div>
+
+                    <div class="flex items-center space-x-6">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="shield-check"></i>
+                            <div class="text-sm">
+                                <span>Admin,</span>
+                                <div class="font-bold text-white">Administrador</div>
+                            </div>
+                        </div>
+                        
+                        <a href="usuarios.html" class="flex items-center space-x-2 hover:text-white">
+                            <i data-lucide="users"></i>
+                            <span class="text-sm hidden sm:block">Usuários</span>
+                        </a>
+
+                        <a href="cupons.html" class="flex items-center space-x-2 text-white font-semibold border-b-2 border-brand-purple pb-1">
+                            <i data-lucide="ticket"></i>
+                            <span class="text-sm hidden sm:block">Cupons</span>
+                        </a>
+
+                        <a href="login.html" class="flex items-center space-x-2 hover:text-white">
+                            <i data-lucide="log-out"></i>
+                            <span class="text-sm hidden sm:block">Sair</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav class="bg-white shadow-sm">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
+                    <span class="text-sm text-gray-500">Painel Administrativo</span>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+            <div class="mb-4 text-sm text-gray-600">
+                <span>Início</span>
+                <span class="mx-1">&gt;</span>
+                <span class="font-semibold text-gray-800">Gerenciar Cupons</span>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
+                
+                <div class="relative w-full md:w-1/3">
+                    <input 
+                        type="text" 
+                        placeholder="Buscar Cupom (ex: DESCONTO10)" 
+                        class="w-full pl-4 pr-10 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-transparent"
+                    >
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                        <i data-lucide="search" class="text-gray-400"></i>
+                    </div>
+                </div>
+
+                <button class="w-full md:w-auto bg-brand-purple text-white font-semibold px-6 py-2.5 rounded-lg shadow-md hover:bg-opacity-90 transition-all duration-200">
+                    Adicionar Cupom
+                </button>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-x-auto">
+                <table class="w-full table-auto">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Código</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Tipo</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Valor</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Validade</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Status</th>
+                            <th class="px-6 py-3 text-right text-xs font-bold text-gray-600 uppercase tracking-wider">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">NATAL15</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">PERCENTAGEM</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">15%</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">25/12/2025</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">ATIVO</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-right space-x-4">
+                                <a href="#" class="text-indigo-600 hover:underline">Editar</a>
+                                <a href="#" class="text-red-600 hover:underline">Excluir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">BEMVINDO</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">FIXO</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">R$ 50,00</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">01/01/2026</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">ATIVO</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-right space-x-4">
+                                <a href="#" class="text-indigo-600 hover:underline">Editar</a>
+                                <a href="#" class="text-red-600 hover:underline">Excluir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-400">BLACKFRIDAY</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-400">PERCENTAGEM</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-400">50%</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-400">29/11/2024</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="inline-block bg-gray-100 text-gray-500 text-xs font-semibold px-3 py-1 rounded-full">INATIVO</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-right space-x-4">
+                                <a href="#" class="text-indigo-600 hover:underline">Editar</a>
+                                <a href="#" class="text-red-600 hover:underline">Excluir</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div> </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
