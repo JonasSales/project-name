@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --verde: rgb(46, 139, 87);
+  --verdec: rgb(60, 160, 100);
+  --laranja: rgb(255, 127, 50);
+  --vermelho: rgb(230, 57, 70);
+  --cinzac: rgb(244, 244, 244);
+  --cinzae: rgb(51, 51, 51);
+  --dourado: rgb(212, 175, 55);
+  --azul: rgb(96, 125, 139);
+  --azul2: rgb(135, 206, 235);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: 0.2 linear;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 500px;
+    background-color:var(--cinzac);
+    border: 2px solid rgba(103, 102, 110, 0.815);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    color: black;
+    padding:15px 0px 15px 0px;
+    display: flex;
+    justify-content: center ;    
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 30px;
+    padding: 0px;
+    color: var(--azul);
+}
+
+.container form{
+    text-align: center;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 20px 0px;
+
+}
+
+.inputBox input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 0 15px 0 15px;
+}
+
+.inputBox input::placeholder{
+    color: rgb(85, 85, 85);
+}
+
+.inputBox i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.password{
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+
+.container form{
+    width: 60%;
+}
+
+.password a{
+    text-decoration: none;
+    color: var(--cinzae);
+}
+
+.password a:hover{
+    text-decoration: underline;
+}
+
+.login {
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--verde);
+    margin: 0 0 20px 0;
+    font-size: 17px;
+    color: white;
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.register{
+    font-size: 14px;
+}
+
+.register a{
+    color: var(--laranja);
+}
