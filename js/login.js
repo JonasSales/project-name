@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Apenas para demonstração:
                 alert('Login enviado com sucesso! (Simulação)');
+                window.location.href = '/htmlFiles/home.html';
             }
         });
     }
