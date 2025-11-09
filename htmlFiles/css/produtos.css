@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    font-weight: 550;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+:root {
+  --verde: rgb(46, 139, 87);
+  --verdec: rgb(60, 160, 100);
+  --laranja: rgb(255, 127, 50);
+  --vermelho: rgb(230, 57, 70);
+  --cinzac: rgb(230, 230, 230);
+  --cinzae: rgb(51, 51, 51);
+  --dourado: rgb(212, 175, 55);
+  --azul: rgb(96, 125, 139);
+  --azul2: rgb(135, 206, 235);
+  --azule: rgb(38, 23, 104);
+}
+
+body{
+    background-color: var(--cinzac);
+    font-size: 16px;
+    width: 100%;
+    overflow-x: hidden;
+}
+.adicionar{
+    background-color:var(--verdec);
+    height: 45px;
+    width: 170px;
+    position: relative;
+    border-radius: 15px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
