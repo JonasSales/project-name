@@ -1,0 +1,132 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    font-weight: 550;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+:root {
+  --verde: rgb(46, 139, 87);
+  --verdec: rgb(67, 182, 113);
+  --laranja: rgb(255, 127, 50);
+  --vermelho: rgb(230, 57, 70);
+  --cinzac: rgb(230, 230, 230);
+  --cinzae: rgb(51, 51, 51);
+  --dourado: rgb(212, 175, 55);
+  --azul: rgb(96, 125, 139);
+  --azul2: rgb(135, 206, 235);
+  --azule: rgb(38, 23, 104);
+}
+
+body{
+    background-color: var(--cinzac);
+    font-size: 16px;
+}
+
+.header1{
+    background-color: var(--verde);
+    top: 0;
+    width: 100vw ;
+    padding: 5px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.principal{
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+}
+
+.header1 nav ul{
+    color: white;
+    display: flex;
+    gap: 50px;
+}
+
+.header1 nav ul li{
+    cursor: pointer;
+    position: 
+    padding 5px 0;
+    position: relative;
+}
+.header1 nav ul li::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.2s;
+}
+.header1 nav ul li:hover::after{
+   width: 100%;
+}
+.header2{
+    width: 100vw ;
+    padding: 5px 70px;
+    background-color: var(--verdec);
+}
+.header2 nav ul li{
+    cursor: pointer;
+    position: 
+    padding 5px 0;
+    position: relative;
+}
+.header2 nav ul{
+    color: white;
+    display: flex;
+    gap: 10%;
+}
+.header2 nav ul li::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.2s;
+}
+.header2 nav ul li:hover::after{
+   width: 100%;
+}
+.logo img{
+    margin-top: 10px;
+}
+.header1 .inputBox{
+    position: relative;
+    margin: 0 0 0 -300px;    
+}
+
+.header1 .inputBox input{
+    height: 23px;
+    width: 300px;  
+    border-radius: 4px;
+    font-size: medium;
+    padding: 0 5px 0 5px;  
+}
+.nome1{
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    font-weight: 900;
+    position: relative;
+    top: -4px;
+}
+
+.inputBox .bi-search {
+  position: absolute;
+  right: 10px;  
+  top: 50%;
+  transform: translateY(-50%); 
+  fill: var(--cinzae);
+  cursor: pointer;
+}
