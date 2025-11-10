@@ -1,193 +1,217 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>WalmartAngolano Angolano - O Seu Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide.js"></script>
+    
+    <script src="js/tailwind.config.js"></script>
+    
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<body class="font-sans bg-page-bg">
 
-<body>
-    <div id="header"></div>
+    <div id="app" class="flex flex-col min-h-screen">
 
-<script>
-  fetch("header.html")
-    .then(response => response.text())
-    .then(data => document.getElementById("header").innerHTML = data);
-</script>
+        <header class="bg-header-bg text-gray-200 shadow-lg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
 
-    <main class="container">
-        <p class="inicio">Inicio</p>
-        <div class="produtos-container">
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        <div class="produto">
-            <img src="img/image.png" alt="Imagem Produto" class="imgproduto">
-            <!-- Coração sem estar preenchido
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-            </svg>
-            <p class="nomeproduto">Nome do Produto</p>
-            <p class="precofalso">preçofalso</p>
-            <p class="precoreal">preço real</p>
-        </div>
-        </div>
-    </main>
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-yellow-400 p-2 rounded-md">
+                            <svg class="w-6 h-6 text-header-bg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                        </div>
+                        <span class="text-xl font-bold text-white">WoMart Angolano</span>
+                    </div>
+
+                    <div class="flex items-center space-x-6">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="user-circle-2"></i>
+                            <div class="text-sm">
+                                <span>Bem-vindo,</span>
+                                <div class="font-bold text-white">Cliente</div>
+                            </div>
+                        </div>
+
+                        <a href="home.html" class="flex items-center space-x-2 text-gray-200 hover:text-white font-semibold pb-1">
+                            <i data-lucide="package"></i>
+                            <span class="text-sm hidden sm:block">Produtos</span>
+                        </a>
+
+
+                        <a href="pedidos.html" class="flex items-center space-x-2 text-gray-200 hover:text-white font-semibold pb-1">
+                            <i data-lucide="package"></i>
+                            <span class="text-sm hidden sm:block">Meus Pedidos</span>
+                        </a>
+
+                        <a href="carrinho.html" class="flex items-center space-x-2 hover:text-white">
+                            <i data-lucide="shopping-cart"></i>
+                            <span class="text-sm hidden sm:block">Carrinho</span>
+                        </a>
+
+                        <a href="login.html" class="flex items-center space-x-2 hover:text-white">
+                            <i data-lucide="log-out"></i>
+                            <span class="text-sm hidden sm:block">Sair</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="bg-white shadow-sm">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+                    
+                    <div class="flex-grow max-w-2xl mx-auto">
+                        <div class="relative">
+                            <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                            <input 
+                                type="text" 
+                                placeholder="Pesquisar produtos, lojas ou categorias..." 
+                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-brand-purple"
+                            >
+                        </div>
+                    </div>
+
+                    <button class="ml-4 bg-brand-purple text-white p-2 rounded-lg hover:bg-opacity-90 transition hidden md:flex items-center space-x-2">
+                        <i data-lucide="menu"></i>
+                        <span class="font-semibold">Categorias</span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+            <div class="mb-6 text-sm text-gray-600">
+                <span class="font-semibold text-gray-800">Início</span>
+            </div>
+
+            <div class="bg-brand-purple h-40 md:h-64 rounded-lg shadow-xl mb-10 p-6 flex items-center justify-center">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white text-center">
+                    Ofertas Exclusivas do WoMart Angolano!
+                </h1>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-yellow-400 pl-3">Produtos em Destaque</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="relative h-40 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300?text=Produto+1" alt="Nome do Produto" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-yellow-400 text-header-bg text-xs font-bold px-2 py-1 rounded-full">Novo</span>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h3 class="text-sm font-semibold text-gray-800 truncate mb-1" title="Nome Longo do Produto de Tecnologia Incrível">
+                            Nome Longo do Produto de Tecnologia Incrível
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-3">Eletrônicos</p>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <p class="text-xl font-bold text-gray-900">R$ 1.250,00</p>
+                            </div>
+
+                        <button class="w-full bg-brand-purple text-white py-2 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-colors flex items-center justify-center space-x-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Adicionar</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="relative h-40 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300?text=Produto+2" alt="Nome do Produto 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-semibold text-gray-800 truncate mb-1" title="Tênis Esportivo Pro Performance">
+                            Tênis Esportivo Pro Performance
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-3">Moda</p>
+                        <div class="flex items-end justify-between mb-4">
+                            <p class="text-xl font-bold text-gray-900">R$ 349,90</p>
+                        </div>
+                        <button class="w-full bg-brand-purple text-white py-2 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-colors flex items-center justify-center space-x-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Adicionar</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="relative h-40 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300?text=Produto+3" alt="Cadeira Gamer" class="w-full h-full object-cover">
+                        <span class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">20% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-semibold text-gray-800 truncate mb-1" title="Cadeira Gamer Ergonômica Top">
+                            Cadeira Gamer Ergonômica Top
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-3">Mobiliário</p>
+                        <div class="flex flex-col mb-4">
+                            <p class="text-xs text-gray-500 line-through">R$ 1.999,00</p>
+                            <p class="text-2xl font-bold text-red-600">R$ 1.599,20</p>
+                        </div>
+                        <button class="w-full bg-brand-purple text-white py-2 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-colors flex items-center justify-center space-x-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Comprar</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="relative h-40 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300?text=Produto+4" alt="Livro Fantasia" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-semibold text-gray-800 truncate mb-1" title="Livro de Fantasia: A Lenda de WoMart">
+                            Livro de Fantasia: A Lenda de WoMart
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-3">Livros</p>
+                        <div class="flex items-end justify-between mb-4">
+                            <p class="text-xl font-bold text-gray-900">R$ 59,99</p>
+                        </div>
+                        <button class="w-full bg-brand-purple text-white py-2 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-colors flex items-center justify-center space-x-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Adicionar</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="relative h-40 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300?text=Produto+5" alt="Ferramenta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-semibold text-gray-800 truncate mb-1" title="Kit de Ferramentas Essenciais">
+                            Kit de Ferramentas Essenciais
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-3">Casa e Jardim</p>
+                        <div class="flex items-end justify-between mb-4">
+                            <p class="text-xl font-bold text-gray-900">R$ 89,90</p>
+                        </div>
+                        <button class="w-full bg-brand-purple text-white py-2 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-colors flex items-center justify-center space-x-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Adicionar</span>
+                        </button>
+                    </div>
+                </div>
+
+                </div>
+            </main>
+        <footer class="bg-gray-800 text-gray-400 py-6 mt-10">
+            <div class="container mx-auto px-4 text-center text-sm">
+                &copy; 2024 WoMart Angolano. Todos os direitos reservados.
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/js/home.js"></script>
 </body>
-
 </html>
