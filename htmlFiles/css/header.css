@@ -10,12 +10,6 @@
     border: none;
     text-decoration: none;
 }
-header {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 :root {
   --verde: rgb(46, 139, 87);
@@ -28,6 +22,7 @@ header {
   --azul: rgb(96, 125, 139);
   --azul2: rgb(135, 206, 235);
   --azule: rgb(38, 23, 104);
+
 }
 
 body{
@@ -36,7 +31,7 @@ body{
 }
 
 .header1{
-    background-color: var(--verde);
+    background-color: rgba(31, 32, 36, 1);
     top: 0;
     width: 100vw ;
     padding: 5px 50px;
@@ -80,7 +75,7 @@ body{
 .header2{
     width: 100vw ;
     padding: 5px 70px;
-    background-color: var(--verdec);
+    background-color: rgba(167, 52, 208, 1);
 }
 .header2 nav ul li{
     cursor: pointer;
