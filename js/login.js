@@ -31,13 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Se tudo for válido, o formulário pode ser enviado
             if (isValid) {
-                console.log('Formulário de login válido. Enviando...');
-                // Descomente a linha abaixo para permitir o envio real
-                // loginForm.submit(); 
+                console.log('Formulário de login válido. Simulando login...');
                 
-                // Apenas para demonstração:
-                alert('Login enviado com sucesso! (Simulação)');
-                window.location.href = '/htmlFiles/home.html';
+                alert('Login efetuado com sucesso! (Simulação)');
+                
+                const email = emailInput.value.toLowerCase();
+
+                if (email.startsWith('admin')) {
+                    window.location.href = '/htmlFiles/usuarios.html';
+
+                } else if (email.startsWith('fornecedor')) {
+                    window.location.href = '/htmlFiles/produtos.html';
+
+                } else {
+                    window.location.href = '/htmlFiles/home.html';
+                }
             }
         });
     }
@@ -59,17 +67,18 @@ function isValidEmail(email) {
  * @param {string} message - A mensagem de erro
  */
 function showError(inputElement, message) {
-    // Remove a classe de foco padrão para destacar o erro
-    inputElement.classList.remove('focus:ring-brand-purple');
     // Adiciona a borda vermelha de erro
-    inputElement.classList.add('border-red-500');
+    inputElement.classList.add('border-red-500'); // Simples adição de classe para erro
 
     // Cria o elemento <p> para a mensagem de erro
     const errorElement = document.createElement('p');
-    errorElement.className = 'text-red-500 text-xs mt-1 validation-error';
+    errorElement.className = 'text-red-500 text-xs mt-1 validation-error'; // Classes de erro
+    errorElement.style.color = 'red'; // Estilo inline para garantir visibilidade
+    errorElement.style.fontSize = '12px';
+    errorElement.style.textAlign = 'left';
     errorElement.textContent = message;
     
-    // Insere a mensagem de erro logo após o input
+    // Insere a mensagem de erro logo após o input (dentro do inputBox)
     inputElement.parentNode.appendChild(errorElement);
 }
 
@@ -85,6 +94,5 @@ function clearErrors() {
     const errorInputs = document.querySelectorAll('.border-red-500');
     errorInputs.forEach(input => {
         input.classList.remove('border-red-500');
-        input.classList.add('focus:ring-brand-purple');
     });
 }
